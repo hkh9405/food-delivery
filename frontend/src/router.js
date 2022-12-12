@@ -8,6 +8,8 @@ Vue.use(Router);
 import OrderManager from "./components/listers/OrderCards"
 import OrderDetail from "./components/listers/OrderDetail"
 
+import MenuView from "./components/MenuView"
+import MenuViewDetail from "./components/MenuViewDetail"
 import OrderInfoView from "./components/OrderInfoView"
 import OrderInfoViewDetail from "./components/OrderInfoViewDetail"
 import OrderManageManager from "./components/listers/OrderManageCards"
@@ -42,6 +44,16 @@ export default new Router({
                 component: OrderDetail
             },
 
+            {
+                path: '/menus',
+                name: 'MenuView',
+                component: MenuView
+            },
+            {
+                path: '/menus/:id',
+                name: 'MenuViewDetail',
+                component: MenuViewDetail
+            },
             {
                 path: '/orderInfos',
                 name: 'OrderInfoView',
